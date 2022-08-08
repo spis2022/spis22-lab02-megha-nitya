@@ -1,6 +1,6 @@
 import math 
 # The goal of this program is to practice Python constructs
-'''def getNumber():
+def getNumber():
    x=0 
    finalNum=""
    
@@ -14,7 +14,7 @@ import math
    
    return finalNum
 
-print(getNumber())'''
+#print(getNumber())
 
 def sumDigits(x):
   #store length of x in a variable
@@ -36,4 +36,12 @@ def sumDigits(x):
 
   return sum
 
-print("sum:", sumDigits(23))
+#print("sum:", sumDigits(23))
+
+def convertWageMtoW(mWage):
+
+   wageGap = 0.182
+
+   ratio = 1 - wageGap
+
+   return mWage * ratio
