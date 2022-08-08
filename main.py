@@ -1,5 +1,6 @@
+import math 
 # The goal of this program is to practice Python constructs
-def getNumber():
+'''def getNumber():
    x=0 
    finalNum=""
    
@@ -13,5 +14,26 @@ def getNumber():
    
    return finalNum
 
-print(getNumber())
+print(getNumber())'''
 
+def sumDigits(x):
+  #store length of x in a variable
+  numLength = len(str(x))
+  sum = 0
+  #for loop
+  for i in range(numLength-1):
+    #print("entering loop")
+    rightdigit = x % 10
+    #print("rightdigit", rightdigit)
+    sum+=rightdigit
+    x = x // 10
+    print("x = ", x)
+    
+    if x < 10:
+      sum += x
+    #print("exiting loop")
+   # You will need to complete this function
+
+  return sum
+
+print("sum:", sumDigits(23))
