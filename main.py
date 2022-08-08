@@ -37,11 +37,26 @@ def sumDigits(x):
   return sum
 
 #print("sum:", sumDigits(23))
+'''
+converts men's wage to women's wage taking into account country
+parameters: mens wage and country
+return: womens wage
+'''
+def convertWageMtoW(mWage, country):
+  if country == "Norway":
+    wageGap = 0.046
 
-def convertWageMtoW(mWage):
+  elif country == "France":
+    wageGap = 0.118
 
-   wageGap = 0.182
+  elif country == "Canada":
+    wageGap = 0.167
 
-   ratio = 1 - wageGap
+  else:
+    wageGap = 0.182
+  
+  ratio = 1 - wageGap
 
-   return mWage * ratio
+  return mWage * ratio
+
+print("wage", convertWageMtoW(100, "Greece"))
